@@ -237,4 +237,5 @@ kim = Person()
 kim.add_files('img')
 
 print(jin.folder)
+print(jin.folder)
 print(kim.folder)
