@@ -18,6 +18,7 @@ MAX_PAGES = 3
 #현재 페이지 번호를 추적하기 위한 변수
 current_page = 1
 
+#수집한 데이터를 담을 리스트
 results = []
 
 while current_page <= MAX_PAGES:
@@ -32,7 +33,7 @@ while current_page <= MAX_PAGES:
         tags = [t.text for t in tag_elements]
 
         results.append({
-                'page' : 1,
+                'page' : current_page,
                 'quote': quote_text,
                 'author': author,
                 'tags': tags
@@ -53,7 +54,11 @@ while current_page <= MAX_PAGES:
     # 페이지 번호 1 증가
     current_page += 1
 
-    print('최종 수집 개수 :', len(results))
+print('최종 수집 개수 :', len(results))
+
+# 최종 수집된 결과에서 page 번호와 quote 텍스트만 출력함
+for r in results:
+    print(r['page'], r['quote'])
 
 driver.quit()
 
