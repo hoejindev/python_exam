@@ -98,6 +98,7 @@ with open('test.csv', 'w', newline='') as f:
     csv.writer(f).writerows(['name','score'])
 '''
 
+'''
 # 자료구조 모듈
 # 자료구조를 편하게 쓰도록 도와줌
 # 카운트, 큐, 딕셔너리 확장 기능 제공
@@ -106,3 +107,4 @@ from collections import Counter
 
 #문자열에서 각 글자의 개수를 셈
 print(Counter('apple'))
+'''
