@@ -225,7 +225,7 @@ while current_page <= MAX_PAGES:
     quote_blocks = driver.find_elements(By.CLASS_NAME, 'quote')
 
     for block in quote_blocks:
-        quote_text = block.find_element(By.CLASS_NAME, 'text').text
+        #quote_text = block.find_element(By.CLASS_NAME, 'text').text
         author = block.find_element(By.CLASS_NAME, 'author').text
        
         collected.append({
